@@ -1,0 +1,61 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_recipe": 0,
+        "back": 1,
+        "goodbye": 2,
+        "greet": 3,
+        "inform": 4,
+        "nlu_fallback": 5,
+        "out_of_scope": 6,
+        "request_cuisine_recipe": 7,
+        "request_ingredients_recipe": 8,
+        "request_recipe": 9,
+        "restart": 10,
+        "session_start": 11,
+        "specify_cuisine": 12,
+        "specify_diet": 13,
+        "thank_you": 14,
+        "thanks": 15,
+        "thankyou": 16
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_generate_recipe": 13,
+        "action_provide_recipe": 14,
+        "action_provide_cuisine_recipe": 15,
+        "action_provide_ingredients_recipe": 16,
+        "utter_ask_ingredients": 17,
+        "utter_goodbye": 18,
+        "utter_greet": 19,
+        "utter_recipe": 20,
+        "utter_you_are_welcome": 21
+      },
+      "entities": {
+        "ingredients": 0
+      },
+      "slots": {
+        "ingredients_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

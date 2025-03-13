@@ -1,0 +1,78 @@
+version: "3.1"
+
+# Intents: Define the user inputs your bot will recognize
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - request_recipe
+  - list_ingredients
+  - provide_instructions
+  - suggest_recipe
+  - inform
+  - thank_you
+
+# Entities: Define the pieces of information your bot will extract from user input
+entities:
+  - recipe_name
+
+# Slots: Define the memory slots your bot will use to store information
+slots:
+  recipe_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: recipe_name
+
+# Responses: Define the bot's responses to user inputs
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you with recipes today?"
+    - text: "Hi there! What recipe are you looking for?"
+    - text: "Hey! Ready to cook something delicious? What recipe do you need?"
+
+  utter_goodbye:
+    - text: "Goodbye! Happy cooking!"
+    - text: "See you later! Enjoy your meal!"
+    - text: "Bye! Let me know if you need more recipes."
+
+  utter_thank_you:
+    - text: "You're welcome! Let me know if you need anything else."
+    - text: "No problem! Happy to help."
+
+  utter_ask_recipe_name:
+    - text: "Which recipe are you looking for?"
+    - text: "What recipe do you want to cook?"
+    - text: "Tell me the name of the recipe you're interested in."
+
+  utter_default:
+    - text: "Sorry, I didn't understand that. Can you rephrase?"
+    - text: "I'm not sure what you mean. Could you clarify?"
+
+  utter_no_recipe_found:
+    - text: "Sorry, I couldn't find a recipe for that."
+    - text: "I don't have a recipe for that. Try another one!"
+
+  utter_ask_continue:
+    - text: "Do you need anything else?"
+    - text: "Can I help you with something else?"
+
+# Actions: Define the custom actions your bot will perform
+actions:
+  - action_fetch_recipe
+  - action_list_ingredients
+  - action_provide_instructions
+  - action_suggest_recipe
+
+# Forms: Define forms for collecting multiple pieces of information
+forms:
+  recipe_form:
+    required_slots:
+      - recipe_name
+
+# Session Configuration: Define how long the bot remembers the conversation
+session_config:
+  session_expiration_time: 60  # Session expires after 60 minutes of inactivity
+  carry_over_slots_to_new_session: true  # Carry over slots to new sessions

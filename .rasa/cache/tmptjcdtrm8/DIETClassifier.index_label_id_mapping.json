@@ -1,0 +1,12 @@
+{
+  "0": "ask_recipe",
+  "1": "goodbye",
+  "2": "greet",
+  "3": "inform",
+  "4": "request_cuisine_recipe",
+  "5": "request_ingredients_recipe",
+  "6": "request_recipe",
+  "7": "specify_cuisine",
+  "8": "specify_diet",
+  "9": "thanks"
+}

@@ -1,0 +1,21 @@
+nlu:
+  - intent: request_recipe
+    examples: |
+      - How do I make [pasta](recipe_name)?
+      - Can you give me a recipe for [lasagna](recipe_name)?
+      - I want to cook [chicken curry](recipe_name).
+
+  - intent: list_ingredients
+    examples: |
+      - What are the ingredients for [pasta](recipe_name)?
+      - List the ingredients for [lasagna](recipe_name).
+
+  - intent: provide_instructions
+    examples: |
+      - How do I make [pasta](recipe_name)?
+      - What are the steps to cook [lasagna](recipe_name)?
+
+  - intent: suggest_recipe
+    examples: |
+      - Can you suggest a recipe?
+      - What should I cook today?

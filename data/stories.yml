@@ -1,0 +1,36 @@
+version: "3.1"
+
+stories:
+  - story: User asks for a recipe suggestion
+    steps:
+      - intent: suggest_recipe
+      - action: action_suggest_recipe
+
+  - story: User requests a specific recipe
+    steps:
+      - intent: request_recipe
+      - action: action_fetch_recipe
+
+  - story: User asks for ingredients of a specific recipe
+    steps:
+      - intent: list_ingredients
+      - action: action_list_ingredients
+
+  - story: User asks for instructions of a specific recipe
+    steps:
+      - intent: provide_instructions
+      - action: action_provide_instructions
+
+  - story: User asks for a recipe, then its ingredients
+    steps:
+      - intent: request_recipe
+      - action: action_fetch_recipe
+      - intent: list_ingredients
+      - action: action_list_ingredients
+
+  - story: User asks for a recipe, then its instructions
+    steps:
+      - intent: request_recipe
+      - action: action_fetch_recipe
+      - intent: provide_instructions
+      - action: action_provide_instructions

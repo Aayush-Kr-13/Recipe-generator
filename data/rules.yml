@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+  - rule: Act on suggest recipe intent
+    steps:
+      - intent: suggest_recipe
+      - action: action_suggest_recipe
+
+  - rule: Act on request recipe intent
+    steps:
+      - intent: request_recipe
+      - action: action_fetch_recipe
+
+  - rule: Act on list ingredients intent
+    steps:
+      - intent: list_ingredients
+      - action: action_list_ingredients
+
+  - rule: Act on provide instructions intent
+    steps:
+      - intent: provide_instructions
+      - action: action_provide_instructions
